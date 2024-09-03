@@ -173,7 +173,6 @@ public:
     }
 
     const std::string &getMsg() const {
-
         return msg;
     }
 

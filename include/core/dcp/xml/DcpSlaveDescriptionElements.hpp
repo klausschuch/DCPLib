@@ -413,6 +413,7 @@ static std::string to_string(DimensionType dim){
     }
     throw std::runtime_error(std::string("Invalid DimensionType encountered: ") + std::to_string(static_cast<unsigned int>(dim)));
 }
+
 struct Dimension_t {
     DimensionType type;
     uint64_t value;

@@ -31,7 +31,7 @@ public:
         this->payload = payload;
         managed = false;
     }
-    
+
     DcpBinary(const DcpBinary &other) {
         payload = new uint8_t[other.getSize() + 4];
         setBinary(other.getSize(), other.getBinary());

@@ -729,13 +729,13 @@ protected:
 
         switch (runLastExitPoint) {
             case DcpState::RUNNING: {
-		    if (asynchronousCallback[DcpCallbackTypes::RUNNING_NRT_STEP]) {
-			std::thread t(runningNRTStepCallback, steps);
-			t.detach();
-		    } else {
-			runningNRTStepCallback(steps);
-			computingFinished();
-		    }
+                if (asynchronousCallback[DcpCallbackTypes::RUNNING_NRT_STEP]) {
+                    std::thread t(runningNRTStepCallback, steps);
+                    t.detach();
+                } else {
+                    runningNRTStepCallback(steps);
+                    computingFinished();
+                }
                 break;
             }
             case DcpState::SYNCHRONIZING: {
